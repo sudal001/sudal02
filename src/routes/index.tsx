@@ -8,6 +8,7 @@ import MovieDetails from '@/routes/pages/MovieDetails'
 import NotFound from '@/routes/pages/NotFound'
 import SignIn from '@/routes/pages/SignIn'
 import { requiresAuth } from '@/routes/loaders/index'
+import Todos from '@/routes/pages/Todos'
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,8 @@ const router = createBrowserRouter([
           }
         ]
       },
-      { path: '/signin', element: <SignIn /> }
+      { path: '/signin', element: <SignIn /> },
+      { path: '/todos', element: <Todos /> }
     ]
   },
   {

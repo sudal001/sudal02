@@ -1,7 +1,9 @@
 export default function TextField({
+  ref,
   label,
   ...restProps
 }: {
+  ref?: React.RefObject<HTMLInputElement | null>
   label?: string
 } & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
@@ -10,6 +12,7 @@ export default function TextField({
         {label && <span className="text-xs text-gray-500">{label}</span>}
         <input
           {...restProps}
+          ref={ref}
           className="h-[32px] rounded-md border-1 border-gray-500 px-2"
         />
       </label>
